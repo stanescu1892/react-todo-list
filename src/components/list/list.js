@@ -9,13 +9,15 @@ const List = ({
 }) => {
   return (
     <div className="list-container">
-      <div className="list-header">{listTitle}</div>
+      <div className="list-header fs-2">{listTitle}</div>
       <ul>
         {list.map((item, index) => (
           <li key={item.title + index}>
             <div className="items-container">
-              <div>Titlul - {item.title}</div>
-              <div>Descriere - {item.description}</div>
+              <div className="fs-4 fw-bold text-decoration-underline">
+                {item.title}
+              </div>
+              <div className="fs-6">{item.description}</div>
             </div>
             <div>
               <select
